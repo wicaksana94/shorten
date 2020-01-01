@@ -51,7 +51,7 @@
     <div class="content h-100 m-5 p-5">
       <header class="d-flex justify-content-between mx-5">
         <h3>Pendekk</h3>
-        <a href="#" class="text-white"><i class="fab fa-github mr-1"></i>Github</a>
+        <a href="https://github.com/wicaksana94/shorten/" class="text-white"><i class="fab fa-github mr-1"></i>Github</a>
       </header>
       <div class="container text-center pt-5 mt-5">
         <div>
