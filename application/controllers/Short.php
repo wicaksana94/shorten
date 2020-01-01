@@ -7,6 +7,9 @@ class Short extends CI_Controller {
 	function ShortenUrl()
 	{
 		$long_url = $this->input->post('url_text');
+
+		$long_url = preg_replace('/^(?!https?:\/\/)/', 'http://', $long_url);
+
 		$bitlyClient = new BitlyClient('3dfd1620524910a60d5a438b094b78928cd6ff94');
 
 		$options = [
@@ -16,10 +19,6 @@ class Short extends CI_Controller {
 
 		$response = $bitlyClient->shorten($options);
 
-		// echo "<pre>";
-		// print_r ($response);
-		// echo "</pre>";
-		// die();
 		echo $response->data->url;
 	}
 
