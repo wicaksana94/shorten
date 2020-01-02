@@ -74,7 +74,7 @@
       </div>
       <div class="card card-result mt-5 mx-auto w-50 text-dark d-none">
         <div class="card-body d-flex justify-content-between align-items-center">
-          <span><label class="my-0 mr-1">Congratulations, your short url is</label><label id="result" class="m-0"></label></span>
+          <span><label class="my-0 mr-1">Congratulations, your short url is</label><label id="result" class="m-0 short_url_result"></label></span>
           <div>
             <button id="copy_button" class="rounded_button" onclick="copyData()" data-toggle="modal" data-target="#copyModal" title="Copy URL"><i class="far fa-copy"></i></button>
             <button id="qrcoce_button" class="rounded_button" data-toggle="modal" data-target="#qrcodeModal" title="Show QR Code"><i class="fas fa-qrcode"></i></button>
@@ -82,16 +82,15 @@
         </div>
       </div>
     </div>
-
-<div class="p-5 bg-light text-dark text-center">
-  <h3 class="">Why use Pendekk?</h3>
-  <p class="m-0">Because Pendekk can shorten your long URL in seconds.</p>
-</div>
-<footer class="footer mt-auto py-3 bg-white text-center">
-  <div class="container">
-    <span class="text-muted">Made with <i class="fas fa-heart text-danger"></i> in <b id="year"></b></span>
-  </div>
-</footer>
+    <div class="p-5 bg-light text-dark text-center">
+      <h3 class="">Why use Pendekk?</h3>
+      <p class="m-0">Because Pendekk can shorten your long URL in seconds.</p>
+    </div>
+    <footer class="footer mt-auto py-3 bg-white text-center">
+      <div class="container">
+        <span class="text-muted">Made with <i class="fas fa-heart text-danger"></i> in <b id="year"></b></span>
+      </div>
+    </footer>
   </body>
 </html>
 
@@ -128,9 +127,12 @@
     border-radius: 2rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   }
-
-
+  .short_url_result {
+    font-size: large;
+    font-weight: 700;
+  }
 </style>
+
 <script>
 $( document ).ready(function() {
     let fulldate = new Date();
