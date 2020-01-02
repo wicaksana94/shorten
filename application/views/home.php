@@ -148,7 +148,7 @@ $( document ).ready(function() {
 
       $.ajax({
         type: 'post',
-        url: '<?php echo base_url();?>Short/ShortenUrl',
+        url: '<?php echo base_url();?>index.php/Short/ShortenUrl',
         data: $('form').serialize(),
         beforeSend : function() {
           $('#url_text').prop('disabled', true);
