@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css")?>">
-  	
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="<?php echo base_url("assets/js/jquery.min.js")?>"></script>
-      <script src="<?php echo base_url("assets/js/popper.min.js")?>"></script>
-      <script src="<?php echo base_url("assets/js/bootstrap.min.js")?>"></script>
-      <script src="https://kit.fontawesome.com/48ef12f1ae.js" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha256-9MzwK2kJKBmsJFdccXoIDDtsbWFh8bjYK/C7UjB1Ay0=" crossorigin="anonymous"></script>
-
-  	<title>Short URL here</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/bootstrap.min.css")?>">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="<?php echo base_url("assets/js/jquery.min.js")?>"></script>
+    <script src="<?php echo base_url("assets/js/popper.min.js")?>"></script>
+    <script src="<?php echo base_url("assets/js/bootstrap.min.js")?>"></script>
+    <script src="https://kit.fontawesome.com/48ef12f1ae.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha256-9MzwK2kJKBmsJFdccXoIDDtsbWFh8bjYK/C7UjB1Ay0=" crossorigin="anonymous"></script>
+    <title>Short URL here</title>
   </head>
   <body>
-
-<!-- Modal -->
-<div class="modal fade" id="qrcodeModal" tabindex="-1" role="dialog" aria-labelledby="qrcodeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-body d-flex justify-content-center">
-        <div id="qrcode"></div>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="copyModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-body d-flex justify-content-center">
-        <h4 id="copied_data" class="m-0 text-dark"></h4>
-      </div>
-      <div class="modal-footer d-flex justify-content-center">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+    <!-- Modal -->
+    <div class="modal fade" id="qrcodeModal" tabindex="-1" role="dialog" aria-labelledby="qrcodeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body d-flex justify-content-center">
+            <div id="qrcode"></div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
+    <!-- Modal -->
+    <div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-labelledby="copyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body d-flex justify-content-center">
+            <h4 id="copied_data" class="m-0 text-dark"></h4>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="content h-100 m-5 p-5">
       <header class="d-flex justify-content-between mx-5">
         <h3>Pendekk</h3>
@@ -60,12 +54,12 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-12">
-          <form id="send_url_text">
-            <input type="text" name="url_text" id="url_text" class="form_input text-muted" placeholder="Paste your URL here" required>
-            <button type="submit" class="rounded_button"><i class="fas fa-arrow-right text-muted"></i></button>
-          </form>
+            <form id="send_url_text">
+              <input type="text" name="url_text" id="url_text" class="form_input text-muted" placeholder="Paste your URL here" required>
+              <button type="submit" class="rounded_button"><i class="fas fa-arrow-right text-muted"></i></button>
+            </form>
           </div>
-        </div>      
+        </div>
       </div>
       <div id="loader" class="mt-5 d-none">
         <div class="d-flex justify-content-center">
