@@ -152,6 +152,7 @@ $( document ).ready(function() {
           $('#url_text').prop('disabled', true);
           $('#loader').removeClass("d-none");
           $('.card-result').addClass("d-none");
+          $('#qrcode').html('');
         },
         success: function (data_response) {
           $('#loader').addClass("d-none");
