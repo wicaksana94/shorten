@@ -19,7 +19,20 @@ class Short extends CI_Controller {
 
 		$response = $bitlyClient->shorten($options);
 
-		echo $response->data->url;
+		if ($response->status_txt=="INVALID_URI") {
+			$error_response = array('status_code' => $response->status_code,
+									'message' => "Error. Please check your input.");
+			echo json_encode($error_response);
+		} else {
+			if (!empty($response->data->url)) {
+				$message = $response->data->url;
+			} else {
+				$message = "Your URL already shorten";
+			}
+			$success_response = array('status_code' => $response->status_code,
+									'message' => $message);
+			echo json_encode($success_response, JSON_UNESCAPED_SLASHES);
+		}		
 	}
 
 }
